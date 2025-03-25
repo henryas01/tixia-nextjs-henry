@@ -21,7 +21,7 @@ const DateComponent = () => {
       }}
     >
       <Typography sx={{ color: "black", marginBottom: 1 }}>
-        {t("data-stay")}
+        {t("date-stay")}
       </Typography>
       <TextField
         slotProps={{ input: { style: { borderRadius: 18 } } }}

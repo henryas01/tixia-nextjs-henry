@@ -1,10 +1,10 @@
-import { Typography, Box, Container } from "@mui/material";
+import getServerTranslation from "@app/src/app/Dictionaries/hooks/getServerTranslation";
 import React from "react";
+import { Typography, Box, Container } from "@mui/material";
 import FormInput from "./Components/FormInput";
-import useTranslation from "@app/src/app/Dictionaries/hooks/useTranslation";
 
-const Home = () => {
-  const { t } = useTranslation("common");
+const TestComponent = async () => {
+  const { t } = await getServerTranslation("common");
   return (
     <Box
       sx={{
@@ -56,4 +56,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default TestComponent;

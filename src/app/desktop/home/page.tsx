@@ -1,4 +1,4 @@
-import Home from "@app/src/containers/desktop/home";
+import HomeContainer from "@app/src/containers/desktop/home";
 import ServerSideTranslations from "../../Dictionaries/ServerSideTranslations";
 import Translations from "../../Dictionaries/Translations";
 
@@ -7,7 +7,7 @@ export default async function Page() {
 
   return (
     <Translations _PropsTranslation={dictionaryObj}>
-      <Home />
+      <HomeContainer />
     </Translations>
   );
 }

@@ -38,7 +38,7 @@ const SelectInput = ({ listCity }: Props) => {
       }}
     >
       <Typography sx={{ color: "black", marginBottom: 1 }}>
-        Pilih Kota/Nama Hotel/Destinasi {city}
+        Pilih Kota/Nama Hotel/Destinasi
       </Typography>
       <Select
         displayEmpty
