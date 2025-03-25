@@ -4,7 +4,11 @@ import axios from "axios";
 export default async function Page({
   searchParams,
 }: {
-  searchParams: { city?: number; date?: string; countOfVisitor?: string };
+  searchParams: Promise<{
+    city?: number;
+    date?: string;
+    countOfVisitor?: string;
+  }>;
 }) {
   const searchParamsObj = await searchParams;
   const city = searchParamsObj.city || "Unknown";

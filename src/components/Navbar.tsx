@@ -4,28 +4,13 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
 import Avatar from "@mui/material/Avatar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
-import { useState } from "react";
-
 const menuItems = ["My Booking", "Wishlist", "Blog", "Help"];
 
 export default function Navbar() {
-  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-
-  const handleClick = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-
   return (
     <AppBar position="sticky" color="primary">
       <Container>
@@ -44,7 +29,7 @@ export default function Navbar() {
             ))}
 
             {/* Avatar with Menu */}
-            <IconButton onClick={handleClick} sx={{ p: 0 }}>
+            <IconButton>
               <Avatar alt="User Name" src="/avatar.jpg" />
             </IconButton>
 

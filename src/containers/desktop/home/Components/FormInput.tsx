@@ -1,13 +1,10 @@
-import { Box, Button, TextField, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import React from "react";
 import City from "./city";
 import Submit from "./submit";
 import Date from "./date";
 import Room from "./room";
-// import { HomeContext } from "@app/src/modules/home/contexts";
-
 const FormInput = () => {
-  // const { city } = useContext(HomeContext);
   return (
     <Box
       sx={{
