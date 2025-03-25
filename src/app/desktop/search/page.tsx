@@ -1,5 +1,7 @@
 import SearchContainer from "@app/src/containers/desktop/search";
 import axios from "axios";
+import ServerSideTranslations from "../../Dictionaries/ServerSideTranslations";
+import Translations from "../../Dictionaries/Translations";
 
 export default async function Page({
   searchParams,
@@ -17,5 +19,12 @@ export default async function Page({
   const { data } = await axios.get(
     `https://ota-gin.onrender.com/api/v1/hotels/search?city_id=${city}&date=${date}&rooms_count=${countOfVisitor}`
   );
-  return <SearchContainer data={data?.data ?? {}} />;
+
+  const dictionaryObj = await ServerSideTranslations(["common"]);
+
+  return (
+    <Translations _PropsTranslation={dictionaryObj}>
+      <SearchContainer data={data?.data ?? {}} />
+    </Translations>
+  );
 }

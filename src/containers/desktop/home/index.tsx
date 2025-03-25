@@ -1,8 +1,10 @@
 import { Typography, Box, Container } from "@mui/material";
 import React from "react";
 import FormInput from "./Components/FormInput";
+import useTranslation from "@app/src/app/Dictionaries/hooks/useTranslation";
 
 const Home = () => {
+  const { t } = useTranslation("common");
   return (
     <Box
       sx={{
@@ -42,8 +44,7 @@ const Home = () => {
             marginBottom: 8,
           }}
         >
-          Staycation menjadi lebih mudah hanya dengan satu klik dan dapatkan
-          banyak promo menarik!
+          {t("staycation")}
         </Typography>
 
         <Container>

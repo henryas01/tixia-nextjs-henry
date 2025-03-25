@@ -1,9 +1,11 @@
 "use client";
+import useTranslation from "@app/src/app/Dictionaries/hooks/useTranslation";
 import { HomeContext } from "@app/src/modules/home/contexts";
 import { Box, TextField, Typography } from "@mui/material";
 import React, { useContext } from "react";
 
 const DateComponent = () => {
+  const { t } = useTranslation("common");
   const { setData } = useContext(HomeContext);
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setData({
@@ -19,12 +21,12 @@ const DateComponent = () => {
       }}
     >
       <Typography sx={{ color: "black", marginBottom: 1 }}>
-        Tanggal Menginap
+        {t("data-stay")}
       </Typography>
       <TextField
         slotProps={{ input: { style: { borderRadius: 18 } } }}
         onChange={handleChange}
-        placeholder="Pilih tanggal menginap"
+        placeholder={t("placeholder-date")}
         type="date"
         variant="outlined"
         fullWidth

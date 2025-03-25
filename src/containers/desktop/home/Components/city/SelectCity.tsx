@@ -1,4 +1,5 @@
 "use client";
+import useTranslation from "@app/src/app/Dictionaries/hooks/useTranslation";
 import { HomeContext } from "@app/src/modules/home/contexts";
 import {
   Box,
@@ -20,6 +21,7 @@ type CityType = {
 };
 
 const SelectInput = ({ listCity }: Props) => {
+  const { t } = useTranslation("common");
   const { city, setData } = useContext(HomeContext);
 
   const handleChange = (event: SelectChangeEvent) => {
@@ -46,7 +48,7 @@ const SelectInput = ({ listCity }: Props) => {
         sx={{ borderRadius: 18 }}
         renderValue={(selected) => {
           if (selected.length === 0) {
-            return <em>Pilih nama hotel/destinasi/kota menginap</em>;
+            return <em>{t("placeholder-city")}</em>;
           }
 
           return selected;
@@ -61,7 +63,7 @@ const SelectInput = ({ listCity }: Props) => {
           ))
         ) : (
           <MenuItem value="">
-            <em>Data Kosong</em>
+            <em>{t("empty-city")}</em>
           </MenuItem>
         )}
       </Select>

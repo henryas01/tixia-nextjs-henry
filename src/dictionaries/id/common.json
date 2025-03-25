@@ -1,4 +1,12 @@
 {
   "title": "Tixia Nextjs Henry",
-  "description": "Tixia Nextjs Henry"
+  "description": "Tixia Nextjs Henry",
+  "staycation": "Staycation menjadi lebih mudah hanya dengan satu klik dan dapatkan banyak promo menarik!",
+  "placeholder-city": "Pilih nama hotel/destinasi/kota menginap",
+  "empty-city": "Data Kosong",
+  "placeholder-date": "Pilih tanggal menginap",
+  "date-stay": "Tanggal Menginap",
+  "count-of-visitor": "Jumlah Tamu dan Kamar",
+  "placeholder-rooms-and-visitor": "Masukkan jumlah tamu dan kamar",
+  "find-hotel": "Cari Hotel"
 }

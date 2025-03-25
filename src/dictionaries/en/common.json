@@ -1,4 +1,12 @@
 {
   "title": "Tixia Nextjs Henry",
-  "description": "Tixia Nextjs Henry"
+  "description": "Tixia Nextjs Henry",
+  "staycation": "Staycation made easier with just one click and get many attractive promotions!",
+  "placeholder-city": "Select hotel/destination/city to stay",
+  "empty-city": "No Data",
+  "placeholder-date": "Select stay dates",
+  "date-stay": "Stay Dates",
+  "count-of-visitor": "Number of Guests and Rooms",
+  "placeholder-rooms-and-visitor": "Enter number of guests and rooms",
+  "find-hotel": "Find Hotel"
 }
